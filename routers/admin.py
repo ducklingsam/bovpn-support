@@ -1,5 +1,5 @@
 from aiogram import Router, Bot, F
-from aiogram.types import Message
+from aiogram.types import Message, ReactionType, ReactionTypeEmoji
 from aiogram.filters import Command
 
 from config import settings
@@ -265,7 +265,7 @@ async def handle_admin_reply(message: Message, bot: Bot):
                 direction="outgoing",
             )
 
-        await message.react([{"type": "emoji", "emoji": "✅"}])
+        await message.react(reaction=[ReactionTypeEmoji(emoji="🕊")])
 
     except Exception as e:
         await message.answer(f"Ошибка отправки: {e}")
