@@ -1,0 +1,8 @@
+`/stats` - Statistics (users, tickets, response time)                                                                                                                                                           
+`/user <id>` - User info & history                                                                                                                                                                              
+`/close` - Close current ticket (reply to message)                                                                                                                                                              
+`/block <id>` - Block user                                                                                                                                                                                      
+`/unblock <id>` - Unblock user                                                                                                                                                                                  
+`/quick` - List quick replies                                                                                                                                                                                   
+`/quick add <shortcut> <text>` - Add quick reply                                                                                                                                                                
+`/q <shortcut>` - Send quick reply (reply to message)   

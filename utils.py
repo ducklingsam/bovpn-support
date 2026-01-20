@@ -10,8 +10,8 @@ def format_user_card(user: User, ticket: Ticket, stats: UserStats) -> str:
 
     return (
         f"📨 Новое сообщение\n\n"
-        f"👤 Имя: {full_name} ({username_str})\n"
-        f"🆔 ID: {user.id}\n"
+        f"👤 Имя: {full_name} (`{username_str}`)\n"
+        f"🆔 ID: `{user.id}`\n"
         f"📊 Сообщений: {stats.message_count} | Тикетов: {stats.ticket_count}\n"
         f"🕐 Первый контакт: {created_at_str}\n"
         f"📝 Тикет #{ticket.id} ({ticket.status})\n"
