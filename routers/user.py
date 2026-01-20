@@ -1,5 +1,6 @@
 from aiogram import Router, Bot, F
 from aiogram.types import Message
+from aiogram.filters import Command
 
 from config import settings
 from database import db
@@ -7,6 +8,21 @@ from models import User
 from utils import format_user_card
 
 router = Router()
+
+WELCOME_MESSAGE = """👋 Добро пожаловать в поддержку BOVPN!
+
+Опишите вашу проблему или задайте вопрос — мы ответим как можно скорее.
+
+Вы можете отправлять:
+• Текстовые сообщения
+• Фото и скриншоты
+• Документы и файлы
+• Голосовые сообщения"""
+
+
+@router.message(Command("start"), F.from_user.id != settings.admin_id)
+async def cmd_start(message: Message):
+    await message.answer(WELCOME_MESSAGE)
 
 
 async def forward_to_admin(message: Message, bot: Bot, db_user: User):
