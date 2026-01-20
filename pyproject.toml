@@ -1,0 +1,10 @@
+[project]
+name = "bovpn-support"
+version = "0.1.0"
+description = "Telegram support bot for BOVPN"
+requires-python = ">=3.12"
+dependencies = [
+    "aiogram>=3.24.0",
+    "asyncpg>=0.30.0",
+    "pydantic-settings>=2.7.0",
+]
